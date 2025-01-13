@@ -11,7 +11,7 @@ object ProjectConfiguration {
         const val packageName = "com.tweener.charts"
         const val versionName = "1.3.1"
         const val namespace = "$packageName.android"
-        const val compileSDK = 34
+        const val compileSDK = 35
         const val minSDK = 24
 
         object Maven {

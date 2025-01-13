@@ -7,6 +7,11 @@
 [![Website](https://img.shields.io/badge/Author-vivienmahe.com-purple)](https://vivienmahe.com/)
 [![X/Twitter](https://img.shields.io/twitter/follow/VivienMahe)](https://twitter.com/VivienMahe)
 
+<br>
+
+![Black background](https://github.com/user-attachments/assets/5f4e807b-3d98-4049-9574-a1d097e3e4c8#gh-dark-mode-only)
+![White background](https://github.com/user-attachments/assets/c01de8b6-b96f-4d81-8429-5d74b4a32d67#gh-light-mode-only)
+
 ---
 
 # Chartopia
@@ -134,6 +139,12 @@ Some examples of output with straight or curved lines:
 ## 👨‍💻 Contributing
 
 We love your input and welcome any contributions! Please read our [contribution guidelines](https://github.com/Tweener/chartopia/blob/master/CONTRIBUTING.md) before submitting a pull request.
+
+---
+
+## 🙏 Credits
+
+- Logo by [Freeicons](https://freeicons.io/university-3/economy-data-chart-business-graph-icon-511816)
 
 ---
 

@@ -1,4 +1,4 @@
-name: Build [kmp-charts]
+name: Build [Chartopia]
 
 on:
   workflow_call:

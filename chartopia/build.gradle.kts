@@ -12,15 +12,15 @@ plugins {
 }
 
 android {
-    namespace = ProjectConfiguration.Charts.namespace
-    compileSdk = ProjectConfiguration.Charts.compileSDK
+    namespace = ProjectConfiguration.Chartopia.namespace
+    compileSdk = ProjectConfiguration.Chartopia.compileSDK
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        minSdk = ProjectConfiguration.Charts.minSDK
+        minSdk = ProjectConfiguration.Chartopia.minSDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -58,7 +58,6 @@ kotlin {
     androidTarget {
         publishLibraryVariants("release")
 
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.fromTarget(ProjectConfiguration.Compiler.jvmTarget))
         }
@@ -70,7 +69,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "kmp-charts"
+            baseName = "chartopia"
             isStatic = true
         }
     }
@@ -125,8 +124,8 @@ val javadocJar = tasks.create<Jar>("javadocJar") {
     from(dokkaOutputDir)
 }
 
-group = ProjectConfiguration.Charts.Maven.group
-version = ProjectConfiguration.Charts.versionName
+group = ProjectConfiguration.Chartopia.Maven.group
+version = ProjectConfiguration.Chartopia.versionName
 
 publishing {
     publications {
@@ -134,9 +133,9 @@ publishing {
             artifact(javadocJar)
 
             pom {
-                name.set(ProjectConfiguration.Charts.Maven.name)
-                description.set(ProjectConfiguration.Charts.Maven.description)
-                url.set(ProjectConfiguration.Charts.Maven.packageUrl)
+                name.set(ProjectConfiguration.Chartopia.Maven.name)
+                description.set(ProjectConfiguration.Chartopia.Maven.description)
+                url.set(ProjectConfiguration.Chartopia.Maven.packageUrl)
 
                 licenses {
                     license {
@@ -147,21 +146,21 @@ publishing {
 
                 issueManagement {
                     system.set("GitHub Issues")
-                    url.set("${ProjectConfiguration.Charts.Maven.packageUrl}/issues")
+                    url.set("${ProjectConfiguration.Chartopia.Maven.packageUrl}/issues")
                 }
 
                 developers {
                     developer {
-                        id.set(ProjectConfiguration.Charts.Maven.Developer.id)
-                        name.set(ProjectConfiguration.Charts.Maven.Developer.name)
-                        email.set(ProjectConfiguration.Charts.Maven.Developer.email)
+                        id.set(ProjectConfiguration.Chartopia.Maven.Developer.id)
+                        name.set(ProjectConfiguration.Chartopia.Maven.Developer.name)
+                        email.set(ProjectConfiguration.Chartopia.Maven.Developer.email)
                     }
                 }
 
                 scm {
-                    connection.set("scm:git:git://${ProjectConfiguration.Charts.Maven.gitUrl}")
-                    developerConnection.set("scm:git:ssh://${ProjectConfiguration.Charts.Maven.gitUrl}")
-                    url.set(ProjectConfiguration.Charts.Maven.packageUrl)
+                    connection.set("scm:git:git://${ProjectConfiguration.Chartopia.Maven.gitUrl}")
+                    developerConnection.set("scm:git:ssh://${ProjectConfiguration.Chartopia.Maven.gitUrl}")
+                    url.set(ProjectConfiguration.Chartopia.Maven.packageUrl)
                 }
             }
         }

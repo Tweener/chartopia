@@ -1,4 +1,4 @@
-# How to contribute to kmp-charts
+# How to contribute to Chartopia
 
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
@@ -30,5 +30,5 @@ Pull requests are the best way to propose changes to the codebase. We actively w
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under its Apache-2.0 license. See [LICENCE](https://github.com/Tweener/kmp-charts?tab=Apache-2.0-1-ov-file#readme) for more
+By contributing, you agree that your contributions will be licensed under its Apache-2.0 license. See [LICENCE](https://github.com/Tweener/chartopia?tab=Apache-2.0-1-ov-file#readme) for more
 details.

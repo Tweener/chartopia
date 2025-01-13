@@ -7,7 +7,7 @@ import org.gradle.api.JavaVersion
 
 object ProjectConfiguration {
 
-    object Charts {
+    object Chartopia {
         const val packageName = "com.tweener.charts"
         const val versionName = "1.3.1"
         const val namespace = "$packageName.android"
@@ -15,11 +15,11 @@ object ProjectConfiguration {
         const val minSDK = 24
 
         object Maven {
-            const val name = "KMPCharts"
+            const val name = "Chartopia"
             const val description = "A Kotlin/Compose Multiplatform library that offers many different types of charts"
             const val group = "io.github.tweener"
-            const val packageUrl = "https://github.com/Tweener/kmp-charts"
-            const val gitUrl = "github.com:Tweener/kmp-charts.git"
+            const val packageUrl = "https://github.com/Tweener/chartopia"
+            const val gitUrl = "github.com:Tweener/chartopia.git"
 
             object Developer {
                 const val id = "Tweener"

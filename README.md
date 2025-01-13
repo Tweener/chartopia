@@ -1,4 +1,4 @@
-[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/kmp-charts?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/kmp-charts)
+[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/chartopia?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/chartopia)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.0.21-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/compose-1.7.1-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
 ![gradle-version](https://img.shields.io/badge/gradle-8.5.2-blue?logo=gradle)
@@ -9,9 +9,9 @@
 
 ---
 
-# kmp-charts
+# Chartopia
 
-**kmp-charts** is a Kotlin/Compose Multiplatform library that offers various types of charts to display data.
+**Chartopia** is a Kotlin/Compose Multiplatform library that offers various types of charts to display data.
 
 <br>
 
@@ -30,21 +30,21 @@ repositories {
 }
 ```
 
-Then add kmp-charts dependency to your module:
+Then add Chartopia dependency to your module:
 
 - With version catalog, open `libs.versions.toml`:
 ```Groovy
 [versions]
-kmpCharts = "1.3.1" // Check latest version
+chartopia = "1.3.1" // Check latest version
 
 [libraries]
-kmpCharts = { group = "io.github.tweener", name = "kmp-charts", version.ref = "kmpCharts" }
+chartopia = { group = "io.github.tweener", name = "chartopia", version.ref = "chartopia" }
 ```
 
 Then in your module `build.gradle.kts` add:
 ```Groovy
 dependencies {
-    implementation(libs.kmpCharts)
+    implementation(libs.chartopia)
 }
 ```
 
@@ -53,16 +53,16 @@ dependencies {
 dependencies {
     val kmp_charts_version = "1.3.1" // Check latest version
 
-    implementation("io.github.tweener:kmp-charts:$kmp_charts_version")
+    implementation("io.github.tweener:chartopia:$kmp_charts_version")
 }
 ```
 
-The latest version is: [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/kmp-charts?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/kmp-charts)
+The latest version is: [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/chartopia?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/chartopia)
 
 ## 🧑‍💻 Usage
 
 ### 🍩 Donut chart
-A [`DonutChart`](https://github.com/Tweener/kmp-charts/blob/main/kmp-charts/src/commonMain/kotlin/com/tweener/charts/DonutChart.kt#L61) requires a list of [Segment](https://github.com/Tweener/kmp-charts/blob/main/kmp-charts/src/commonMain/kotlin/com/tweener/charts/DonutChart.kt#L43)s, with the first segment starting from the given `startAngleFromOrigin` in degrees.
+A [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/charts/DonutChart.kt#L61) requires a list of [Segment](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/charts/DonutChart.kt#L43)s, with the first segment starting from the given `startAngleFromOrigin` in degrees.
 Each segment is defined by an **angle**, its **color** and an optional **progress** option.
 
 _See [`.degrees`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/FloatExtensions.kt#L15) to easily use float angles in degrees._ 
@@ -92,7 +92,7 @@ DonutChart(
 ```
 This code gives the following output:
 
-<img src="https://github.com/Tweener/kmp-charts/assets/596985/9b1a82dd-6358-4d6e-af2c-cbb3bfe67258" width="350">
+<img src="https://github.com/Tweener/chartopia/assets/596985/9b1a82dd-6358-4d6e-af2c-cbb3bfe67258" width="350">
 
 ### 📈 Line chart
 A LineChart is a versatile chart used to visualize data points connected by straight or curved lines. It is ideal for displaying trends, relationships, or changes over time.
@@ -133,10 +133,10 @@ Some examples of output with straight or curved lines:
 
 ## 👨‍💻 Contributing
 
-We love your input and welcome any contributions! Please read our [contribution guidelines](https://github.com/Tweener/kmp-charts/blob/master/CONTRIBUTING.md) before submitting a pull request.
+We love your input and welcome any contributions! Please read our [contribution guidelines](https://github.com/Tweener/chartopia/blob/master/CONTRIBUTING.md) before submitting a pull request.
 
 ---
 
 ## 📜 Licence
 
-kmp-charts is licensed under the [Apache-2.0](https://github.com/Tweener/kmp-charts?tab=Apache-2.0-1-ov-file#readme).
+Chartopia is licensed under the [Apache-2.0](https://github.com/Tweener/chartopia?tab=Apache-2.0-1-ov-file#readme).

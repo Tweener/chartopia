@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kmp-charts"
-include(":kmp-charts")
+rootProject.name = "Chartopia"
+include(":chartopia")

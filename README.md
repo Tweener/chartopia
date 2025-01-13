@@ -51,9 +51,9 @@ dependencies {
 - Without version catalog, in your module `build.gradle.kts` add:
 ```Groovy
 dependencies {
-    val kmp_charts_version = "1.3.1" // Check latest version
+    val chartopia_version = "1.3.1" // Check latest version
 
-    implementation("io.github.tweener:chartopia:$kmp_charts_version")
+    implementation("io.github.tweener:chartopia:$chartopia_version")
 }
 ```
 
@@ -62,7 +62,7 @@ The latest version is: [![Maven Central Version](https://img.shields.io/maven-ce
 ## 🧑‍💻 Usage
 
 ### 🍩 Donut chart
-A [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/charts/DonutChart.kt#L61) requires a list of [Segment](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/charts/DonutChart.kt#L43)s, with the first segment starting from the given `startAngleFromOrigin` in degrees.
+A [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/DonutChart.kt#L61) requires a list of [Segment](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/DonutChart.kt#L43)s, with the first segment starting from the given `startAngleFromOrigin` in degrees.
 Each segment is defined by an **angle**, its **color** and an optional **progress** option.
 
 _See [`.degrees`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/FloatExtensions.kt#L15) to easily use float angles in degrees._ 

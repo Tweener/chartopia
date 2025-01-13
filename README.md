@@ -16,11 +16,18 @@
 
 # Chartopia
 
-**Chartopia** is a Kotlin/Compose Multiplatform library that offers various types of charts to display data.
+**Chartopia** is a Kotlin/Compose Multiplatform library that provides a variety of customizable charts to visually represent data.
 
 <br>
 
 Be sure to show your support by starring ⭐️ this repository, and feel free to [contribute](#-contributing) if you're interested!
+
+---
+
+## 🌟 Features
+
+- 🍩 **DonutChart**: A circular chart for visualizing proportional data, with smooth animations and extensive customization options. Add a list of segments to represent categories, making it perfect for percentages or distribution comparisons.
+- 📈 **LineChart**: A versatile chart for displaying trends and patterns, fully customizable with animated transitions. Supports multiple lines on the same chart, enabling clear and effective comparisons of different datasets on shared axes.
 
 ---
 

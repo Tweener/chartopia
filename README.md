@@ -7,15 +7,27 @@
 [![Website](https://img.shields.io/badge/Author-vivienmahe.com-purple)](https://vivienmahe.com/)
 [![X/Twitter](https://img.shields.io/twitter/follow/VivienMahe)](https://twitter.com/VivienMahe)
 
+<br>
+
+![Black background](https://github.com/user-attachments/assets/5f4e807b-3d98-4049-9574-a1d097e3e4c8#gh-dark-mode-only)
+![White background](https://github.com/user-attachments/assets/c01de8b6-b96f-4d81-8429-5d74b4a32d67#gh-light-mode-only)
+
 ---
 
 # Chartopia
 
-**Chartopia** is a Kotlin/Compose Multiplatform library that offers various types of charts to display data.
+**Chartopia** is a Kotlin/Compose Multiplatform library that provides a variety of customizable charts to visually represent data.
 
 <br>
 
 Be sure to show your support by starring ⭐️ this repository, and feel free to [contribute](#-contributing) if you're interested!
+
+---
+
+## 🌟 Features
+
+- 🍩 **DonutChart**: A circular chart for visualizing proportional data, with smooth animations and extensive customization options. Add a list of segments to represent categories, making it perfect for percentages or distribution comparisons.
+- 📈 **LineChart**: A versatile chart for displaying trends and patterns, fully customizable with animated transitions. Supports multiple lines on the same chart, enabling clear and effective comparisons of different datasets on shared axes.
 
 ---
 
@@ -35,7 +47,7 @@ Then add Chartopia dependency to your module:
 - With version catalog, open `libs.versions.toml`:
 ```Groovy
 [versions]
-chartopia = "1.3.1" // Check latest version
+chartopia = "2.0.0" // Check latest version
 
 [libraries]
 chartopia = { group = "io.github.tweener", name = "chartopia", version.ref = "chartopia" }
@@ -51,7 +63,7 @@ dependencies {
 - Without version catalog, in your module `build.gradle.kts` add:
 ```Groovy
 dependencies {
-    val chartopia_version = "1.3.1" // Check latest version
+    val chartopia_version = "2.0.0" // Check latest version
 
     implementation("io.github.tweener:chartopia:$chartopia_version")
 }
@@ -134,6 +146,12 @@ Some examples of output with straight or curved lines:
 ## 👨‍💻 Contributing
 
 We love your input and welcome any contributions! Please read our [contribution guidelines](https://github.com/Tweener/chartopia/blob/master/CONTRIBUTING.md) before submitting a pull request.
+
+---
+
+## 🙏 Credits
+
+- Logo by [Freeicons](https://freeicons.io/university-3/economy-data-chart-business-graph-icon-511816)
 
 ---
 

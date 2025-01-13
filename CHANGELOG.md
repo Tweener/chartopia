@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.0] - January 13, 2025
+- **`[BREAKING]`** `kmp-charts` library has been renamed `Chartopia`.
+> [!WARNING]
+> **Update library dependency:** `io.github.tweener:kmp-charts:1.*` ➡️ `io.github.tweener:chartopia:2.0.0`.
+> 
+> **Update imports:** `import com.tweener.charts.*` ➡️ `import com.tweener.chartopia.*`.
+- Update Kotlin to 2.1.0.
+- Update Compose Multiplatform to 1.7.3.
+- Update Gradle to 8.11.1.
+
 ## [1.3.1] - December 18, 2024
 - 🚀 Upgrade to Compose Multiplatform 1.7.1
 - Fixes line drawing when only two points in `LineChart`: When a curved line only has two points, use `path.quadraticTo()`, otherwise use `path.cubicTo()`.

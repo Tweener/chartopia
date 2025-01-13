@@ -8,7 +8,7 @@ import org.gradle.api.JavaVersion
 object ProjectConfiguration {
 
     object Chartopia {
-        const val packageName = "com.tweener.charts"
+        const val packageName = "com.tweener.chartopia"
         const val versionName = "1.3.1"
         const val namespace = "$packageName.android"
         const val compileSDK = 35

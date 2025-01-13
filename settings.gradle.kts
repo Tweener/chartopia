@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Chartopia"
 include(":chartopia")
+include(":sample:composeApp")

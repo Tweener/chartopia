@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.1] - January 13, 2025
+- Add support for JVM, JS and WasmJS targets.
+
 ## [2.0.0] - January 13, 2025
 - **`[BREAKING]`** `kmp-charts` library has been renamed `Chartopia`.
 > [!WARNING]

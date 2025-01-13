@@ -47,7 +47,7 @@ Then add Chartopia dependency to your module:
 - With version catalog, open `libs.versions.toml`:
 ```Groovy
 [versions]
-chartopia = "1.3.1" // Check latest version
+chartopia = "2.0.0" // Check latest version
 
 [libraries]
 chartopia = { group = "io.github.tweener", name = "chartopia", version.ref = "chartopia" }
@@ -63,7 +63,7 @@ dependencies {
 - Without version catalog, in your module `build.gradle.kts` add:
 ```Groovy
 dependencies {
-    val chartopia_version = "1.3.1" // Check latest version
+    val chartopia_version = "2.0.0" // Check latest version
 
     implementation("io.github.tweener:chartopia:$chartopia_version")
 }

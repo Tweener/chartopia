@@ -62,7 +62,7 @@ The latest version is: [![Maven Central Version](https://img.shields.io/maven-ce
 ## 🧑‍💻 Usage
 
 ### 🍩 Donut chart
-A [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/DonutChart.kt#L61) requires a list of [Segment](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/DonutChart.kt#L43)s, with the first segment starting from the given `startAngleFromOrigin` in degrees.
+A [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/donut/DonutChart.kt) requires a list of [Segment](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/donut/model/Segment.kt)s, with the first segment starting from the given `startAngleFromOrigin` in degrees.
 Each segment is defined by an **angle**, its **color** and an optional **progress** option.
 
 _See [`.degrees`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/FloatExtensions.kt#L15) to easily use float angles in degrees._ 
@@ -95,7 +95,7 @@ This code gives the following output:
 <img src="https://github.com/Tweener/chartopia/assets/596985/9b1a82dd-6358-4d6e-af2c-cbb3bfe67258" width="350">
 
 ### 📈 Line chart
-A LineChart is a versatile chart used to visualize data points connected by straight or curved lines. It is ideal for displaying trends, relationships, or changes over time.
+A [`LineChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/line/LineChart.kt) is a versatile chart used to visualize data points connected by straight or curved lines. It is ideal for displaying trends, relationships, or changes over time.
 
 ```Kotlin
 LineChart(

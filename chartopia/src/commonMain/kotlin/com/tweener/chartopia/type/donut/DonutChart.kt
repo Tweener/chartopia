@@ -31,10 +31,10 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.tweener.chartopia.type.donut.model.Segment
+import com.tweener.czan.theme.Size
 import com.tweener.kmpkit.kotlinextensions.degrees
 import com.tweener.kmpkit.kotlinextensions.radians
 import com.tweener.kmpkit.utils.Degrees
-import com.tweener.czan.theme.Size
 import kotlin.math.atan2
 import kotlin.math.min
 
@@ -46,7 +46,7 @@ typealias Active = Boolean
  * Draws a donut chart with the provided list of [Segment]s, with the first segment starting from the given [startAngleFromOrigin] in degrees.
  *
  * @param startAngleFromOrigin The angle between the right part of the horizontal axis of the circle (0 or 2*PI) and the starting point of the first segment.
- * @param sizes [DonutChartSizes] that will be used to resolve the sizes for this chart. See [DonutChartDefault.chartSizes].
+ * @param sizes [DonutChartSizes] that will be used to resolve the sizes for this chart. See [DonutChartDefault.sizes].
  * @param animated Whether or not the segments should be animated on composition.
  * @param animationDurationMillis Duration of the animation for the segments.
  */
@@ -55,7 +55,7 @@ fun DonutChart(
     segments: List<Segment>,
     modifier: Modifier = Modifier,
     startAngleFromOrigin: Degrees = 270f.degrees,
-    sizes: DonutChartSizes = DonutChartDefault.chartSizes(),
+    sizes: DonutChartSizes = DonutChartDefault.sizes(),
     animated: Boolean = true,
     animationDurationMillis: Int = 300,
     strokeCap: StrokeCap = DefaultCap,
@@ -200,7 +200,7 @@ private fun computeAngleFromPointerInput(
 
 object DonutChartDefault {
 
-    fun chartSizes(
+    fun sizes(
         strokeWidth: Dp = 8.dp,
         selectedStrokeWidth: Dp = 16.dp,
         angleBetweenSegments: Degrees = 8f.degrees,

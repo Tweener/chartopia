@@ -39,8 +39,8 @@ fun LineChart(
     modifier: Modifier = Modifier,
     textStyle: TextStyle = MaterialTheme.typography.labelMedium,
     gridVisibility: GridVisibility = LineChartDefaults.gridVisibility(),
-    colors: LineChartColors = LineChartDefaults.chartColors(),
-    sizes: LineChartSizes = LineChartDefaults.chartSizes(),
+    colors: LineChartColors = LineChartDefaults.colors(),
+    sizes: LineChartSizes = LineChartDefaults.sizes(),
     animated: Boolean = true,
     animationDurationMillis: Int = 800,
 ) {
@@ -107,7 +107,7 @@ object LineChartDefaults {
         showYGrid = showYGrid,
     )
 
-    fun chartSizes(
+    fun sizes(
         axisStrokeWidth: Dp = ChartDefaults.ChartSizes.AxisStrokeWidth,
         axisDashOn: Dp = ChartDefaults.ChartSizes.AxisDashOn,
         axisDashOff: Dp = ChartDefaults.ChartSizes.AxisDashOff,
@@ -122,7 +122,7 @@ object LineChartDefaults {
     )
 
     @Composable
-    fun chartColors(
+    fun colors(
         xAxisValues: Color = ChartDefaults.ChartColors.XAxisValues,
         xAxisGrid: Color = ChartDefaults.ChartColors.XAxisGrid,
         yAxisValues: Color = ChartDefaults.ChartColors.YAxisValues,

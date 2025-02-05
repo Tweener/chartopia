@@ -35,7 +35,7 @@ private fun DonutChartPreview() {
                 Segment(id = "#6", angle = 100f.degrees, progress = 1f, baseColor = gray, enabled = false),
             ),
             startAngleFromOrigin = 270f.degrees,
-            sizes = DonutChartDefault.chartSizes(strokeWidth = 12.dp, selectedStrokeWidth = 22.dp),
+            sizes = DonutChartDefault.sizes(strokeWidth = 12.dp, selectedStrokeWidth = 22.dp),
             animationDurationMillis = 800,
             strokeCap = StrokeCap.Round,
             onSegmentClicked = { segment, active ->

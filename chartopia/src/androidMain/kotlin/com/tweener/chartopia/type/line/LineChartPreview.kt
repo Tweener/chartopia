@@ -185,13 +185,13 @@ private fun LineChartPreview() {
                         showXAxis = true,
                         showYAxis = true,
                     ),
-                    colors = LineChartDefaults.chartColors(
+                    colors = LineChartDefaults.colors(
                         xAxisValues = MaterialTheme.colorScheme.onBackground,
                         xAxisGrid = MaterialTheme.colorScheme.outline,
                         yAxisValues = MaterialTheme.colorScheme.onBackground,
                         yAxisGrid = MaterialTheme.colorScheme.outline,
                     ),
-                    sizes = LineChartDefaults.chartSizes(
+                    sizes = LineChartDefaults.sizes(
                         axisStrokeWidth = 1.dp,
                         axisDashOn = 8.dp,
                         axisDashOff = 8.dp,

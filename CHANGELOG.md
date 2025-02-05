@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.2] - January 13, 2025
+- **`[BREAKING]`** [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/donut/DonutChart.kt) color and size customization methods have been renamed to `DonutChartDefault.colors()` and `DonutChartDefault.sizes()`.
+- **`[BREAKING]`** [`LineChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/line/LineChart.kt) color and size customization methods have been renamed to `LineChartDefaults.colors()` and `LineChartDefaults.sizes()`.
+- Update Kotlin to 2.1.10.
+- Update Corouines to 1.10.1
+- Update Czan to 2.9.1
+- Update KmpKit to 1.0.2
+- Update AndroidActivity to 1.10.0
+
 ## [2.0.1] - January 13, 2025
 - Add support for JVM, JS and WasmJS targets.
 

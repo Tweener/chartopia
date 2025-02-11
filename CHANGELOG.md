@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.2] - January 13, 2025
+## [2.0.2] - February 05, 2025
 - **`[BREAKING]`** [`DonutChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/donut/DonutChart.kt) color and size customization methods have been renamed to `DonutChartDefault.colors()` and `DonutChartDefault.sizes()`.
 - **`[BREAKING]`** [`LineChart`](https://github.com/Tweener/chartopia/blob/main/chartopia/src/commonMain/kotlin/com/tweener/chartopia/type/line/LineChart.kt) color and size customization methods have been renamed to `LineChartDefaults.colors()` and `LineChartDefaults.sizes()`.
 - Update Kotlin to 2.1.10.

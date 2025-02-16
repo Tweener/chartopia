@@ -30,8 +30,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.max
 import com.tweener.chartopia.type.donut.model.Segment
-import com.tweener.czan.theme.Size
 import com.tweener.kmpkit.kotlinextensions.degrees
 import com.tweener.kmpkit.kotlinextensions.radians
 import com.tweener.kmpkit.utils.Degrees
@@ -63,6 +63,7 @@ fun DonutChart(
 ) {
     val density = LocalDensity.current
     val initialSegmentDrawingAnimRatio = if (LocalInspectionMode.current) 1f else 0f // Don't animate when in Preview mode
+    val padding = max(sizes.selectedStrokeWidth(), sizes.strokeWidth()) / 2 + 1.dp // Add padding to the canvas to avoid clipping
 
     var chartSegments by remember { mutableStateOf(segments) }
     val segmentsStartAngles = remember { mutableStateListOf<Degrees>() } // List of all segments starting angles
@@ -102,7 +103,7 @@ fun DonutChart(
             Canvas(
                 modifier = Modifier
                     .size(canvasSizeDp)
-                    .padding(Size.Padding.Default)
+                    .padding(padding)
                     .pointerInput(chartSegments) {
                         detectTapGestures { offset ->
                             val clickedAngle = computeAngleFromPointerInput(

@@ -8,12 +8,12 @@ dokka = "1.9.20"
 androidAnnotations = "1.9.1"
 coroutines = "1.10.1"
 napier = "2.7.1"
-czan = "2.9.1"
-kmpKit = "1.0.2"
+czan = "2.9.3"
+kmpKit = "1.0.5"
 
 # Android
 androidCore = "1.15.0"
-androidActivity = "1.10.0"
+androidActivity = "1.10.1"
 
 [libraries]
 napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }

@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.4] - March 24, 2025
+- Update Czan to 2.9.3
+- Update KmpKit to 1.0.5
+- Update AndroidActivity to 1.10.1
+
 ## [2.0.3] - February 24, 2025
 - Fixes `DonutChart` content padding by properly calculating the necessary space.
 

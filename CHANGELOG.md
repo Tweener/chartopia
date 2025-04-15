@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.4] - April 15, 2025
+## [2.0.5] - April 15, 2025
 - Update Kotlin to 2.1.20.
 
 ## [2.0.4] - March 24, 2025

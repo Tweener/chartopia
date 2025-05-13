@@ -1,13 +1,10 @@
-name: Publish to Maven Central
+name: Publish IosArm64 to Maven Central
 
 permissions:
   contents: read
 
 on:
   workflow_dispatch:
-
-  release:
-    types: [ released ]
 
 jobs:
   build-release:
@@ -30,20 +27,6 @@ jobs:
         include:
           - target: publishIosArm64PublicationToSonatypeRepository
             os: macos-latest
-          - target: publishIosSimulatorArm64PublicationToSonatypeRepository
-            os: macos-latest
-          - target: publishIosX64PublicationToSonatypeRepository
-            os: macos-latest
-          - target: publishAndroidReleasePublicationToSonatypeRepository
-            os: ubuntu-latest
-          - target: publishJsPublicationToSonatypeRepository
-            os: ubuntu-latest
-          - target: publishWasmJsPublicationToSonatypeRepository
-            os: ubuntu-latest
-          - target: publishJvmPublicationToSonatypeRepository
-            os: ubuntu-latest
-          - target: publishKotlinMultiplatformPublicationToSonatypeRepository
-            os: ubuntu-latest
     runs-on: ${{ matrix.os }}
 
     steps:

@@ -1,7 +1,7 @@
 [versions]
-kotlin = "2.1.20"
+kotlin = "2.1.21"
 gradle = "8.8.2"
-composeMultiplatform = "1.7.3"
+composeMultiplatform = "1.8.0"
 dependencyVersionsPlugin = "0.51.0"
 nexusSonatype = "2.0.0"
 dokka = "1.9.20"
@@ -9,7 +9,7 @@ androidAnnotations = "1.9.1"
 coroutines = "1.10.1"
 napier = "2.7.1"
 czan = "2.9.4"
-kmpKit = "1.0.6"
+kmpKit = "1.0.7"
 
 # Android
 androidCore = "1.16.0"

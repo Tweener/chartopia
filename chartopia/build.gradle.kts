@@ -1,3 +1,6 @@
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.KotlinMultiplatform
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -8,8 +11,7 @@ plugins {
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.jetbrains.compose.compiler)
     alias(libs.plugins.dokka)
-    id("maven-publish")
-    id("signing")
+    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -119,65 +121,50 @@ kotlin {
 
 // region Publishing
 
-// Dokka configuration
-val dokkaOutputDir = rootProject.layout.buildDirectory.asFile.get().resolve("dokka")
-tasks.dokkaHtml { outputDirectory.set(file(dokkaOutputDir)) }
-val deleteDokkaOutputDir by tasks.register<Delete>("deleteDokkaOutputDirectory") { delete(dokkaOutputDir) }
-val javadocJar = tasks.create<Jar>("javadocJar") {
-    archiveClassifier.set("javadoc")
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    dependsOn(deleteDokkaOutputDir, tasks.dokkaHtml)
-    from(dokkaOutputDir)
-}
-
 group = ProjectConfiguration.Chartopia.Maven.group
 version = ProjectConfiguration.Chartopia.versionName
 
-publishing {
-    publications {
-        publications.withType<MavenPublication> {
-            artifact(javadocJar)
+mavenPublishing {
+    publishToMavenCentral(host = SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
+    signAllPublications()
+    coordinates(groupId = group.toString(), artifactId = ProjectConfiguration.Chartopia.Maven.name.lowercase(), version = version.toString())
+    configure(
+        platform = KotlinMultiplatform(
+            javadocJar = JavadocJar.Dokka("dokkaHtml"),
+            sourcesJar = true,
+        )
+    )
 
-            pom {
-                name.set(ProjectConfiguration.Chartopia.Maven.name)
-                description.set(ProjectConfiguration.Chartopia.Maven.description)
-                url.set(ProjectConfiguration.Chartopia.Maven.packageUrl)
+    pom {
+        name = ProjectConfiguration.Chartopia.Maven.name
+        description = ProjectConfiguration.Chartopia.Maven.description
+        url = ProjectConfiguration.Chartopia.Maven.packageUrl
 
-                licenses {
-                    license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                    }
-                }
-
-                issueManagement {
-                    system.set("GitHub Issues")
-                    url.set("${ProjectConfiguration.Chartopia.Maven.packageUrl}/issues")
-                }
-
-                developers {
-                    developer {
-                        id.set(ProjectConfiguration.Chartopia.Maven.Developer.id)
-                        name.set(ProjectConfiguration.Chartopia.Maven.Developer.name)
-                        email.set(ProjectConfiguration.Chartopia.Maven.Developer.email)
-                    }
-                }
-
-                scm {
-                    connection.set("scm:git:git://${ProjectConfiguration.Chartopia.Maven.gitUrl}")
-                    developerConnection.set("scm:git:ssh://${ProjectConfiguration.Chartopia.Maven.gitUrl}")
-                    url.set(ProjectConfiguration.Chartopia.Maven.packageUrl)
-                }
+        licenses {
+            license {
+                name = "The Apache License, Version 2.0"
+                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
             }
         }
-    }
-}
 
-signing {
-    if (project.hasProperty("signing.gnupg.keyName")) {
-        println("Signing lib...")
-        useGpgCmd()
-        sign(publishing.publications)
+        issueManagement {
+            system = "GitHub Issues"
+            url = "${ProjectConfiguration.Chartopia.Maven.packageUrl}/issues"
+        }
+
+        developers {
+            developer {
+                id = ProjectConfiguration.Chartopia.Maven.Developer.id
+                name = ProjectConfiguration.Chartopia.Maven.Developer.name
+                email = ProjectConfiguration.Chartopia.Maven.Developer.email
+            }
+        }
+
+        scm {
+            connection = "scm:git:git://${ProjectConfiguration.Chartopia.Maven.gitUrl}"
+            developerConnection = "scm:git:ssh://${ProjectConfiguration.Chartopia.Maven.gitUrl}"
+            url = ProjectConfiguration.Chartopia.Maven.packageUrl
+        }
     }
 }
 

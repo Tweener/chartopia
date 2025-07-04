@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.7] - July 4th, 2025
+- Update Kotlin to 2.2.0.
+- Update Compose Multiplatform to 1.8.2.
+- Update Gradle to 8.11.0.
+- Update Coroutines to 1.10.2.
+- Update Czan to 2.9.7.
+- Update KMPKit to 1.0.9.
+
 ## [2.0.6] - May 13, 2025
 - Update Kotlin to 2.1.21.
 - Update Compose Multiplatform to 1.8.0.

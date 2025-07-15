@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.8] - July 15, 2025
+- Update Gradle to 8.11.1.
+- Update KMPKit to 1.0.10.
+  
 ## [2.0.7] - July 4th, 2025
 - Update Kotlin to 2.2.0.
 - Update Compose Multiplatform to 1.8.2.
